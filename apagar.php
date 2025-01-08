@@ -25,5 +25,6 @@ if (! is_null($matricula)) {
     fclose($tmpHandle);
     unlink($filename);
     copy($tmpFilename, $filename);
+    unlink($tmpFilename);
 }
 header('Location: index.php');
