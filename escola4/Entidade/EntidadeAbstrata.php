@@ -43,13 +43,7 @@ abstract class EntidadeAbstrata
 
         return self::$pdo;
     }
-
-    public function dd($a)
-    {
-        print_r($a);
-        die();
-    }
-
+    
     public static function listar()
     {
         $resultSet = self::getPDO()->query('SELECT * FROM ' . static::$tabela);
